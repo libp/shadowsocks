@@ -9,6 +9,8 @@ ENV DNS_ADDRS="8.8.8.8,8.8.4.4"
 ENV TZ=UTC
 ENV ARGS=
 
+COPY . /tmp/repo
+
 RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.tuna.tsinghua.edu.cn/g' /etc/apk/repositories
 
 RUN apk update ;\
